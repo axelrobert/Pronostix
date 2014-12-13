@@ -1,14 +1,13 @@
 package fr.freud.expandedlistview;
 
-import android.animation.ObjectAnimator;
 import android.app.Activity;
 import android.os.Bundle;
+import android.util.Log;
 import android.util.SparseArray;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ExpandableListView;
-import android.widget.TextView;
 
 
 public class MainActivity extends Activity {
@@ -33,6 +32,7 @@ public class MainActivity extends Activity {
                 // We call collapseGroupWithAnimation(int) and
                 // expandGroupWithAnimation(int) to animate group
                 // expansion/collapse.
+                Log.i("MainActivity", "group click");
                 if (listView.isGroupExpanded(groupPosition)) {
                     listView.collapseGroupWithAnimation(groupPosition);
                 } else {

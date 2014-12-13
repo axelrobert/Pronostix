@@ -105,6 +105,10 @@ public class MyExpandableListAdapter extends AnimatedExpandableListView.Animated
         Group group = (Group) getGroup(groupPosition);
         ((TextView) convertView).setText(group.string);
         //((TextView) convertView).setChecked(isExpanded);
+
+        p.append((float)((valuesNombreAa[i][j])*100)/len(nombreAa(seqData2[i])))
+
+
         return convertView;
     }
 
