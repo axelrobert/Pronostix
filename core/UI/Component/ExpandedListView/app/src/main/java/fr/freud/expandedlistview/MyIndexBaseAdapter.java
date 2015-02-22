@@ -6,19 +6,22 @@ import android.util.SparseArray;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MyExpandableListAdapter extends AnimatedExpandableListView.AnimatedExpandableListAdapter {
+import indexedlistview.adapter.IndexBaseAdapter;
 
+/**
+ * Created by François_2 on 22/12/2014.
+ */
+public class MyIndexBaseAdapter extends IndexBaseAdapter {
     private final SparseArray<Group> groups;
     public LayoutInflater inflater;
     public Activity activity;
 
-    public MyExpandableListAdapter(Activity act, SparseArray<Group> groups) {
+    public MyIndexBaseAdapter(Activity act, SparseArray<Group> groups) {
         activity = act;
         this.groups = groups;
         inflater = act.getLayoutInflater();
@@ -44,7 +47,7 @@ public class MyExpandableListAdapter extends AnimatedExpandableListView.Animated
         final View view = convertView;
         text = (TextView) convertView.findViewById(R.id.textView1);
         text.setText(children);
-        convertView.setOnClickListener(new OnClickListener() {
+        convertView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(activity, children,

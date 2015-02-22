@@ -2,8 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="?android:listPreferredItemHeight"
-    android:clickable="true"
+    android:layout_height="?android:listPreferredItemHeightSmall"
     android:orientation="vertical"
     android:paddingLeft="40dp"
     android:id="@+id/listrow_details_background"
@@ -12,7 +11,7 @@
     <TextView
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
-        android:layout_height="?android:listPreferredItemHeight"
+        android:layout_height="?android:listPreferredItemHeightSmall"
         android:background="#0CFFFFFF"
         android:gravity="center_vertical"
         android:text="@string/hello_world"
